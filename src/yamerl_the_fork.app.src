@@ -3,7 +3,7 @@
 
 {application, yamerl_the_fork, [
     {description,
-      "YAML parser in pure Erlang"
+      "A stripped down fork of yamerl, a YAML parser in pure Erlang"
     },
     {vsn, {cmd, "awk '/^AC_INIT\\(/ { ver=$0; sub(/AC_INIT\\(\\[[^]]+\\], *\\[/, \"\", ver); sub(/\\].*/, \"\", ver); print ver; } { next; }' configure.ac"}},
     {modules, [
@@ -14,6 +14,9 @@
         kernel,
         stdlib
       ]},
+    {licenses, ["2-clause BSD license"]},
+    {links, [{"Github", "https://github.com/amorphid/yamerl_the_fork"}]},
+    {maintainers, ["Michael Pope"]},
     {mod, {yamerl_the_fork_app, []}},
     {env, [
         %% Configuration default values.
