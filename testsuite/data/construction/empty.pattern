@@ -3,16 +3,16 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl)
+      application:start(yamerl_the_fork)
   end,
   [
     ?_assertMatch(
       [],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, false}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, false}])
     ),
     ?_assertMatch(
       [],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, true}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, true}])
     )
   ]
 }

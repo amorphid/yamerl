@@ -27,7 +27,7 @@
 
 -  .
 #-  .1 # Rejected
-#-  .e+3 # Parsed as a string by yamerl
+#-  .e+3 # Parsed as a string by yamerl_the_fork
 #- 1. # Rejected
 #- 1.e+3 # Rejected
 

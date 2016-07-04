@@ -16,8 +16,8 @@ export top_builddir="$rootdir"
 
 # Generate fake .app file...
 sed -E -e 's/\{vsn,.*/{vsn, "rebar eunit"},/'				\
- < $rootdir/ebin/yamerl.app.in.in					\
- > $eunitdir/yamerl.app
+ < $rootdir/ebin/yamerl_the_fork.app.in.in					\
+ > $eunitdir/yamerl_the_fork.app
 
 tests="parsing construction wrapper examples"
 for testname in $tests; do

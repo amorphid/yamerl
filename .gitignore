@@ -25,7 +25,7 @@ debian/files
 /rebar
 /deps/
 /test/
-/ebin/yamerl.app
+/ebin/yamerl_the_fork.app
 
 # Elixir Support
 /_build/

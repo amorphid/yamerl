@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: yamerl
+Upstream-Name: yamerl_the_fork
 Upstream-Contact: Jean-Sébastien Pédron <jean-sebastien@yakaz.com>
-Source: https://github.com/yakaz/yamerl
+Source: https://github.com/yakaz/yamerl_the_fork
 
 Files: *
 Copyright: 2012-2014, Yakaz

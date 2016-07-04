@@ -2,7 +2,7 @@
 
 %% TEST
 ?_assertMatch(
-  {yamerl_parser,
+  {yamerl_the_fork_parser,
     {file,"${FILENAME}"},
     [{io_blocksize, 1}],
     <<>>,
@@ -40,9 +40,9 @@
     false,
     [],
     [
-      {yamerl_stream_end,1,20},
-      {yamerl_stream_start,1,1,{utf32,little}}
+      {yamerl_the_fork_stream_end,1,20},
+      {yamerl_the_fork_stream_start,1,1,{utf32,little}}
     ]
   },
-  yamerl_parser:file("${FILENAME}", [{io_blocksize, 1}])
+  yamerl_the_fork_parser:file("${FILENAME}", [{io_blocksize, 1}])
 )

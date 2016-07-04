@@ -1,2 +1,2 @@
-!<tag:yamerl,2012:fun> |
+!<tag:yamerl_the_fork,2012:fun> |
   fun() -> "Hello World!" end.

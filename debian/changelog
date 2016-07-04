@@ -1,23 +1,23 @@
-erlang-yamerl (0.3.2-1) stable; urgency=low
+erlang-yamerl_the_fork (0.3.2-1) stable; urgency=low
 
-  * yamerl_parser: Don't build with HiPE by default
+  * yamerl_the_fork_parser: Don't build with HiPE by default
   * Elixir/hex.pm support
-  * Fix generation of yamerl.app with nawk(1)
+  * Fix generation of yamerl_the_fork.app with nawk(1)
 
  -- Jean-Sébastien Pédron <jean-sebastien.pedron@dumbbell.fr>  Sat, 28 Mar 2015 01:43:31 +0100
 
-erlang-yamerl (0.3.1-1) stable; urgency=low
+erlang-yamerl_the_fork (0.3.1-1) stable; urgency=low
 
   * Fix bug with re:run/3 usage and Unicode string (#5).
-  * yamerl_constr: Ensure the node module is loaded.
+  * yamerl_the_fork_constr: Ensure the node module is loaded.
   * Allow to run the testsuite using rebar.
   * Improve documentation.
 
  -- Jean-Sébastien Pédron <jean-sebastien@yakaz.com>  Tue, 22 Jul 2014 16:52:57 +0200
 
-erlang-yamerl (0.3.0-1) stable; urgency=low
+erlang-yamerl_the_fork (0.3.0-1) stable; urgency=low
 
-  * Rename application to "yamerl".
+  * Rename application to "yamerl_the_fork".
   * Fix Debian package.
 
  -- Jean-Sébastien Pédron <jean-sebastien@yakaz.com>  Wed, 26 Mar 2014 11:08:22 +0100

@@ -3,15 +3,15 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl),
-      yamerl_app:set_param(node_mods, [yamerl_node_erlang_atom])
+      application:start(yamerl_the_fork),
+      yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_atom])
   end,
   [
     ?_assertMatch(
       [
         "inexistent_atom"
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, false},
           {erlang_atom_autodetection, true},
           {erlang_atom_only_if_exist, true}
@@ -19,13 +19,13 @@
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
             [{line,1},{column,1}],
             "inexistent_atom"}
         }
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, true},
           {erlang_atom_autodetection, true},
           {erlang_atom_only_if_exist, true}

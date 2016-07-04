@@ -2,7 +2,7 @@
 
 %% TEST
 ?_assertMatch(
-  {yamerl_parser,
+  {yamerl_the_fork_parser,
     string,
     [{token_fun, _}],
     <<>>,
@@ -41,5 +41,5 @@
     [],
     []
   },
-  yamerl_parser:string(<<>>, [{token_fun, fun(_) -> ok end}])
+  yamerl_the_fork_parser:string(<<>>, [{token_fun, fun(_) -> ok end}])
 )

@@ -3,7 +3,7 @@ defmodule Yamerl.Mixfile do
 
   def project do
     [
-      app: :yamerl,
+      app: :yamerl_the_fork,
       version: "0.3.2-1",
       description: description,
       package: package,
@@ -23,8 +23,8 @@ defmodule Yamerl.Mixfile do
       contributors: ["Yakaz", "Jean-Sébastien Pédron"],
       licenses: ["BSD 2-Clause"],
       links: %{
-        "GitHub" => "https://github.com/yakaz/yamerl",
-        "Doc" => "https://github.com/yakaz/yamerl/tree/master/doc"
+        "GitHub" => "https://github.com/yakaz/yamerl_the_fork",
+        "Doc" => "https://github.com/yakaz/yamerl_the_fork/tree/master/doc"
       }]
    end
 end

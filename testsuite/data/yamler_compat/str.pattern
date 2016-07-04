@@ -3,18 +3,18 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl)
+      application:start(yamerl_the_fork)
   end,
   [
     ?_assertEqual(
       yaml:load_file("${FILENAME}"),
-      yamerl_yamler_compat:load_file("${FILENAME}")
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}")
     ),
     ?_assertEqual(
       yaml:load_file("${FILENAME}", [
           {schema, yaml_schema_failsafe}
         ]),
-      yamerl_yamler_compat:load_file("${FILENAME}", [
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}", [
           {schema, yaml_schema_failsafe}
         ])
     ),
@@ -26,7 +26,7 @@
     ),
     ?_assertMatch(
       {error, _},
-      yamerl_yamler_compat:load_file("${FILENAME}", [
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}", [
           {schema, yaml_schema_json}
         ])
     ),
@@ -34,7 +34,7 @@
       yaml:load_file("${FILENAME}", [
           {schema, yaml_schema_core}
         ]),
-      yamerl_yamler_compat:load_file("${FILENAME}", [
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}", [
           {schema, yaml_schema_core}
         ])
     ),
@@ -42,7 +42,7 @@
       yaml:load_file("${FILENAME}", [
           {schema, yaml_schema_erlang}
         ]),
-      yamerl_yamler_compat:load_file("${FILENAME}", [
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}", [
           {schema, yaml_schema_erlang}
         ])
     ),
@@ -50,7 +50,7 @@
       yaml:load_file("${FILENAME}", [
           implicit_atoms
         ]),
-      yamerl_yamler_compat:load_file("${FILENAME}", [
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}", [
           implicit_atoms
         ])
     )

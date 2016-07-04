@@ -3,43 +3,43 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl)
+      application:start(yamerl_the_fork)
   end,
   [
     ?_assertMatch(
       [
         [$2, $\s, 8364] % "2 €"
       ],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, false}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, false}])
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
             [{line,1},{column,1}],
             [$2, $\s, 8364]} % "2 €"
         }
       ],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, true}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, true}])
     ),
     ?_assertMatch(
       [
         <<50,32,226,130,172>> % "2 €"
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, false},
           str_node_as_binary
         ])
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
             [{line,1},{column,1}],
             <<50,32,226,130,172>>} % "2 €"
         }
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, true},
           str_node_as_binary
         ])
@@ -48,20 +48,20 @@
       [
         <<0,0,0,50, 0,0,0,32, 0,0,32,172>> % "2 €"
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, false},
           {str_node_as_binary, {utf32, big}}
         ])
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
             [{line,1},{column,1}],
             <<0,0,0,50, 0,0,0,32, 0,0,32,172>>} % "2 €"
         }
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, true},
           {str_node_as_binary, {utf32, big}}
         ])

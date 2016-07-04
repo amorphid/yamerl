@@ -1,5 +1,5 @@
-- !<tag:yamerl,2012:atom> atom
-- !<tag:yamerl,2012:atom> atom requiring quoting!
+- !<tag:yamerl_the_fork,2012:atom> atom
+- !<tag:yamerl_the_fork,2012:atom> atom requiring quoting!
 
 - atom
 - node@domain

@@ -1,4 +1,4 @@
-# yamerl User Guide
+# yamerl_the_fork User Guide
 
 ## Recipes
 

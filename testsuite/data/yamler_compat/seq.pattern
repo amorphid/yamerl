@@ -3,12 +3,12 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl)
+      application:start(yamerl_the_fork)
   end,
   [
     ?_assertEqual(
       yaml:load_file("${FILENAME}"),
-      yamerl_yamler_compat:load_file("${FILENAME}")
+      yamerl_the_fork_yamler_compat:load_file("${FILENAME}")
     )
   ]
 }

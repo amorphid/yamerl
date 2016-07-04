@@ -1,4 +1,4 @@
-# yamerl Installation
+# yamerl_the_fork Installation
 
 ## tl;dr
 
@@ -7,8 +7,8 @@
 1. Take the sources from GitHub and run rebar(1):
 
   ```bash
-  git clone 'https://github.com/yakaz/yamerl.git'
-  cd yamerl/
+  git clone 'https://github.com/yakaz/yamerl_the_fork.git'
+  cd yamerl_the_fork/
   rebar compile
   ```
 
@@ -17,8 +17,8 @@
 1. Take the sources from GitHub and generate Autotools files:
 
   ```bash
-  git clone 'https://github.com/yakaz/yamerl.git'
-  cd yamerl/
+  git clone 'https://github.com/yakaz/yamerl_the_fork.git'
+  cd yamerl_the_fork/
   autoreconf -vif
   ```
 
@@ -105,12 +105,12 @@ autoreconf -vif
 
   ```bash
   # Create and enter a separate directory.
-  mkdir build-yamerl
-  cd build-yamerl
+  mkdir build-yamerl_the_fork
+  cd build-yamerl_the_fork
 
   # Execute the configure script from this directory; all files are
   # created in this directory, not in the sources directory.
-  /path/to/yamerl-sources/configure
+  /path/to/yamerl_the_fork-sources/configure
   ```
 
 #### Changing the install path

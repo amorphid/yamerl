@@ -2,7 +2,7 @@
 
 %% TEST
 ?_assertMatch(
-  {yamerl_parser,
+  {yamerl_the_fork_parser,
     {file,"${FILENAME}"},
     [],
     <<>>,
@@ -40,32 +40,32 @@
     false,
     [],
     [
-      {yamerl_stream_end,2,12},
-      {yamerl_doc_end,2,12},
-      {yamerl_collection_end,2,12,block,mapping},
-      {yamerl_collection_end,2,12,block,mapping},
-      {yamerl_scalar,2,7,
-        {yamerl_tag,2,7,{non_specific,"?"}},
+      {yamerl_the_fork_stream_end,2,12},
+      {yamerl_the_fork_doc_end,2,12},
+      {yamerl_the_fork_collection_end,2,12,block,mapping},
+      {yamerl_the_fork_collection_end,2,12,block,mapping},
+      {yamerl_the_fork_scalar,2,7,
+        {yamerl_the_fork_tag,2,7,{non_specific,"?"}},
         flow,plain,"value"},
-      {yamerl_mapping_value,2,5},
-      {yamerl_scalar,2,2,
-        {yamerl_tag,2,2,{non_specific,"?"}},
+      {yamerl_the_fork_mapping_value,2,5},
+      {yamerl_the_fork_scalar,2,2,
+        {yamerl_the_fork_tag,2,2,{non_specific,"?"}},
         flow,plain,"key"},
-      {yamerl_mapping_key,2,2},
-      {yamerl_collection_start,2,2,
-        {yamerl_tag,2,2,{non_specific,"?"}},
+      {yamerl_the_fork_mapping_key,2,2},
+      {yamerl_the_fork_collection_start,2,2,
+        {yamerl_the_fork_tag,2,2,{non_specific,"?"}},
         block,mapping},
-      {yamerl_mapping_value,1,14},
-      {yamerl_scalar,1,1,
-        {yamerl_tag,1,1,{non_specific,"?"}},
+      {yamerl_the_fork_mapping_value,1,14},
+      {yamerl_the_fork_scalar,1,1,
+        {yamerl_the_fork_tag,1,1,{non_specific,"?"}},
         flow,plain,"block mapping"},
-      {yamerl_mapping_key,1,1},
-      {yamerl_collection_start,1,1,
-        {yamerl_tag,1,1,{non_specific,"?"}},
+      {yamerl_the_fork_mapping_key,1,1},
+      {yamerl_the_fork_collection_start,1,1,
+        {yamerl_the_fork_tag,1,1,{non_specific,"?"}},
         block,mapping},
-      {yamerl_doc_start,1,1,{1,2},_},
-      {yamerl_stream_start,1,1,utf8}
+      {yamerl_the_fork_doc_start,1,1,{1,2},_},
+      {yamerl_the_fork_stream_start,1,1,utf8}
     ]
   },
-  yamerl_parser:file("${FILENAME}")
+  yamerl_the_fork_parser:file("${FILENAME}")
 )

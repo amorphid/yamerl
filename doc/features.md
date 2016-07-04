@@ -1,6 +1,6 @@
-# yamerl Features
+# yamerl_the_fork Features
 
-## When to use or not yamerl
+## When to use or not yamerl_the_fork
 
 ### Advantages
 
@@ -20,35 +20,35 @@
 * Support [YAML 1.2](http://www.yaml.org/spec/1.2/spec.html) parsing:
 
   ```erlang
-  yamerl_constr:string("YAML snippet").
+  yamerl_the_fork_constr:string("YAML snippet").
   ```
 
 * Support [YAML 1.1](http://yaml.org/spec/1.1/) parsing:
 
   ```erlang
-  yamerl_constr:string("YAML snippet", [{schema, yaml11}]).
+  yamerl_the_fork_constr:string("YAML snippet", [{schema, yaml11}]).
   ```
 
 * Support [JSON](http://json.org/) parsing:
 
   ```erlang
-  yamerl_constr:string(<<"JSON snippet">>, [{schema, json}]).
+  yamerl_the_fork_constr:string(<<"JSON snippet">>, [{schema, json}]).
   ```
 
 * Support **Erlang atom** node type, either when tagged as atom, or if autodetected in plain scalars, and, if asked, only if the atom already exists:
 
   ```erlang
   % Enable support for Erlang atoms.
-  yamerl_app:set_param(node_mods, [yamerl_node_erlang_atom]),
-  yamerl_constr:string("!<tag:yamerl,2012:atom> atom").
+  yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_atom]),
+  yamerl_the_fork_constr:string("!<tag:yamerl_the_fork,2012:atom> atom").
 
   % Autodetect Erlang atoms in plain scalars.
-  yamerl_app:set_param(node_mods, [yamerl_node_erlang_atom]),
-  yamerl_constr:string("atom", [{erlang_atom_autodetection, true}]).
+  yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_atom]),
+  yamerl_the_fork_constr:string("atom", [{erlang_atom_autodetection, true}]).
 
   % Atoms must already exist.
-  yamerl_app:set_param(node_mods, [yamerl_node_erlang_atom]),
-  yamerl_constr:string("atom", [
+  yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_atom]),
+  yamerl_the_fork_constr:string("atom", [
       {erlang_atom_autodetection, true},
       {erlang_atom_only_if_exist, true}
   ]).
@@ -58,8 +58,8 @@
 
   ```erlang
   % Enable support for Erlang fun().
-  yamerl_app:set_param(node_mods, [yamerl_node_erlang_fun]),
-  [Plus_One_Fun] = yamerl_constr:string(<<"!<tag:yamerl,2012:fun> fun(X) -> X + 1 end.">>),
+  yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_fun]),
+  [Plus_One_Fun] = yamerl_the_fork_constr:string(<<"!<tag:yamerl_the_fork,2012:fun> fun(X) -> X + 1 end.">>),
 
   Plus_One_Fun(2). % Return 3.
   ```
@@ -69,9 +69,9 @@
   ```erlang
   % Both calls return the same value.
   yaml:load_file("input.yaml", [{schema, yaml_schema_failsafe}]),
-  yamerl_yamler_compat:load_file("input.yaml", [{schema, yaml_schema_failsafe}])
+  yamerl_the_fork_yamler_compat:load_file("input.yaml", [{schema, yaml_schema_failsafe}])
   ```
 
-## Alternatives to yamerl
+## Alternatives to yamerl_the_fork
 
-If yamerl doesn't fit your needs, you can read a [list of alternatives](alternatives.md#alternatives-to-yamerl).
+If yamerl_the_fork doesn't fit your needs, you can read a [list of alternatives](alternatives.md#alternatives-to-yamerl_the_fork).

@@ -1,5 +1,5 @@
-# yamerl Reference Manual
+# yamerl_the_fork Reference Manual
 
 ## Modules
 
-* [`yamerl_constr`](module-yamerl_constr.md)
+* [`yamerl_the_fork_constr`](module-yamerl_the_fork_constr.md)

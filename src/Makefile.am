@@ -1,32 +1,32 @@
-erlsrcdir = $(ERLANG_INSTALL_LIB_DIR_yamerl)/src
+erlsrcdir = $(ERLANG_INSTALL_LIB_DIR_yamerl_the_fork)/src
 
-dist_erlsrc_DATA = yamerl_app.erl					\
-		   yamerl_sup.erl					\
-		   yamerl_errors.erl					\
-		   yamerl_parser.erl					\
-		   yamerl_constr.erl					\
-		   yamerl_node_seq.erl					\
-		   yamerl_node_map.erl					\
-		   yamerl_node_str.erl					\
-		   yamerl_node_str_json.erl				\
-		   yamerl_node_null.erl					\
-		   yamerl_node_null_json.erl				\
-		   yamerl_node_bool.erl					\
-		   yamerl_node_bool_json.erl				\
-		   yamerl_node_bool_ext.erl				\
-		   yamerl_node_int.erl					\
-		   yamerl_node_int_json.erl				\
-		   yamerl_node_int_ext.erl				\
-		   yamerl_node_float.erl				\
-		   yamerl_node_float_json.erl				\
-		   yamerl_node_float_ext.erl				\
-		   yamerl_node_size.erl					\
-		   yamerl_node_timestamp.erl				\
-		   yamerl_node_ipaddr.erl				\
-		   yamerl_node_erlang_atom.erl				\
-		   yamerl_node_erlang_fun.erl				\
-		   yamerl_yamler_compat.erl				\
-		   yamerl.erl
+dist_erlsrc_DATA = yamerl_the_fork_app.erl					\
+		   yamerl_the_fork_sup.erl					\
+		   yamerl_the_fork_errors.erl					\
+		   yamerl_the_fork_parser.erl					\
+		   yamerl_the_fork_constr.erl					\
+		   yamerl_the_fork_node_seq.erl					\
+		   yamerl_the_fork_node_map.erl					\
+		   yamerl_the_fork_node_str.erl					\
+		   yamerl_the_fork_node_str_json.erl				\
+		   yamerl_the_fork_node_null.erl					\
+		   yamerl_the_fork_node_null_json.erl				\
+		   yamerl_the_fork_node_bool.erl					\
+		   yamerl_the_fork_node_bool_json.erl				\
+		   yamerl_the_fork_node_bool_ext.erl				\
+		   yamerl_the_fork_node_int.erl					\
+		   yamerl_the_fork_node_int_json.erl				\
+		   yamerl_the_fork_node_int_ext.erl				\
+		   yamerl_the_fork_node_float.erl				\
+		   yamerl_the_fork_node_float_json.erl				\
+		   yamerl_the_fork_node_float_ext.erl				\
+		   yamerl_the_fork_node_size.erl					\
+		   yamerl_the_fork_node_timestamp.erl				\
+		   yamerl_the_fork_node_ipaddr.erl				\
+		   yamerl_the_fork_node_erlang_atom.erl				\
+		   yamerl_the_fork_node_erlang_fun.erl				\
+		   yamerl_the_fork_yamler_compat.erl				\
+		   yamerl_the_fork.erl
 
 CLEANFILES = Emakefile
 

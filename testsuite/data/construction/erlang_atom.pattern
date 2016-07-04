@@ -3,8 +3,8 @@
 %% TEST
 {setup,
   fun() ->
-      application:start(yamerl),
-      yamerl_app:set_param(node_mods, [yamerl_node_erlang_atom])
+      application:start(yamerl_the_fork),
+      yamerl_the_fork_app:set_param(node_mods, [yamerl_the_fork_node_erlang_atom])
   end,
   [
     ?_assertMatch(
@@ -20,7 +20,7 @@
           "Not an atom"
         ]
       ],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, false}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, false}])
     ),
     ?_assertMatch(
       [
@@ -35,84 +35,84 @@
           "Not an atom"
         ]
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, false},
           {erlang_atom_autodetection, true}
         ])
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_seq,yamerl_node_seq,"tag:yaml.org,2002:seq",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_seq,yamerl_the_fork_node_seq,"tag:yaml.org,2002:seq",
             [{line,1},{column,1}],
             [
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,1},{column,27}],
                 atom},
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,2},{column,27}],
                 'atom requiring quoting!'},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,4},{column,3}],
                 "atom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,5},{column,3}],
                 "node@domain"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,7},{column,3}],
                 "not an atom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,8},{column,3}],
                 "NotAnAtom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,9},{column,3}],
                 "Not an atom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,10},{column,3}],
                 "Not an atom"}],
             8}}
       ],
-      yamerl_constr:file("${FILENAME}", [{detailed_constr, true}])
+      yamerl_the_fork_constr:file("${FILENAME}", [{detailed_constr, true}])
     ),
     ?_assertMatch(
       [
-        {yamerl_doc,
-          {yamerl_seq,yamerl_node_seq,"tag:yaml.org,2002:seq",
+        {yamerl_the_fork_doc,
+          {yamerl_the_fork_seq,yamerl_the_fork_node_seq,"tag:yaml.org,2002:seq",
             [{line,1},{column,1}],
             [
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,1},{column,27}],
                 atom},
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,2},{column,27}],
                 'atom requiring quoting!'},
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,4},{column,3}],
                 atom},
-              {yamerl_erlang_atom,yamerl_node_erlang_atom,
-                "tag:yamerl,2012:atom",
+              {yamerl_the_fork_erlang_atom,yamerl_the_fork_node_erlang_atom,
+                "tag:yamerl_the_fork,2012:atom",
                 [{line,5},{column,3}],
                 node@domain},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,7},{column,3}],
                 "not an atom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,8},{column,3}],
                 "NotAnAtom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,9},{column,3}],
                 "Not an atom"},
-              {yamerl_str,yamerl_node_str,"tag:yaml.org,2002:str",
+              {yamerl_the_fork_str,yamerl_the_fork_node_str,"tag:yaml.org,2002:str",
                 [{line,10},{column,3}],
                 "Not an atom"}],
             8}}
       ],
-      yamerl_constr:file("${FILENAME}", [
+      yamerl_the_fork_constr:file("${FILENAME}", [
           {detailed_constr, true},
           {erlang_atom_autodetection, true}
         ])

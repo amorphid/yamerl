@@ -2,7 +2,7 @@
 
 %% TEST
 ?_assertMatch(
-  {yamerl_parser,
+  {yamerl_the_fork_parser,
     {file,"${FILENAME}"},
     [],
     <<>>,
@@ -40,14 +40,14 @@
     false,
     [],
     [
-      {yamerl_stream_end,7,1},
-      {yamerl_doc_end,7,1},
-      {yamerl_scalar,1,1,
-        {yamerl_tag,1,1,{non_specific,"!"}},
+      {yamerl_the_fork_stream_end,7,1},
+      {yamerl_the_fork_doc_end,7,1},
+      {yamerl_the_fork_scalar,1,1,
+        {yamerl_the_fork_tag,1,1,{non_specific,"!"}},
         block,folded,"foo \n\n\t bar\n\nbaz\n"},
-      {yamerl_doc_start,1,1,{1,2},_},
-      {yamerl_stream_start,1,1,utf8}
+      {yamerl_the_fork_doc_start,1,1,{1,2},_},
+      {yamerl_the_fork_stream_start,1,1,utf8}
     ]
   },
-  yamerl_parser:file("${FILENAME}")
+  yamerl_the_fork_parser:file("${FILENAME}")
 )

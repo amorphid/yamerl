@@ -2,9 +2,9 @@ dnl ------------------------------------------------------------------
 dnl Autoconf initialization.
 dnl ------------------------------------------------------------------
 
-AC_INIT([yamerl], [0.3.2])
+AC_INIT([yamerl_the_fork], [0.3.2])
 
-AC_CONFIG_SRCDIR([src/yamerl_app.erl])
+AC_CONFIG_SRCDIR([src/yamerl_the_fork_app.erl])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([ac-aux])
 
@@ -270,8 +270,8 @@ AC_SUBST(EMKOPTS)
 AC_SUBST(APP_RELEASE_DATE)
 AC_SUBST(APP_DISTSUFFIX)
 
-exp_ERLANG_INSTALL_LIB_DIR_yamerl=`expand_var ERLANG_INSTALL_LIB_DIR_yamerl`
-AC_SUBST(exp_ERLANG_INSTALL_LIB_DIR_yamerl)
+exp_ERLANG_INSTALL_LIB_DIR_yamerl_the_fork=`expand_var ERLANG_INSTALL_LIB_DIR_yamerl_the_fork`
+AC_SUBST(exp_ERLANG_INSTALL_LIB_DIR_yamerl_the_fork)
 
 dnl ------------------------------------------------------------------
 dnl Autoconf output.
@@ -284,8 +284,8 @@ AC_CONFIG_FILES([
 	src/Makefile
 	src/Emakefile.in
 	ebin/Makefile
-	ebin/yamerl.app.in
-	ebin/yamerl.appup
+	ebin/yamerl_the_fork.app.in
+	ebin/yamerl_the_fork.appup
 	testsuite/Makefile
 	testsuite/etest
 	Makefile
@@ -307,7 +307,7 @@ COLORED_ECHO([ %B== ${PACKAGE_NAME} ${PACKAGE_VERSION}${APP_DISTSUFFIX} ==%b])
 echo
 COLORED_ECHO([Configuration:])
 COLORED_ECHO([    Prefix:               ${prefix}])
-COLORED_ECHO([    Application dir.:     ${exp_ERLANG_INSTALL_LIB_DIR_yamerl}])
+COLORED_ECHO([    Application dir.:     ${exp_ERLANG_INSTALL_LIB_DIR_yamerl_the_fork}])
 echo
 COLORED_ECHO([    Erlang emulator:      ${ERL}])
 COLORED_ECHO([    Erlang compiler:      ${ERLC}])

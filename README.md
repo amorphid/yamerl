@@ -1,21 +1,21 @@
-# yamerl: YAML 1.2 parser in Erlang
+# yamerl_the_fork: YAML 1.2 parser in Erlang
 
 YAML is a human-friendly data serialization format. The specification
 for this language and many examples are available from the [Official
 YAML web site](http://www.yaml.org/). You may also want to check the
 [YAML Wikipedia article](http://en.wikipedia.org/wiki/YAML).
 
-**yamerl** is a pure [Erlang application](http://www.erlang.org/)
+**yamerl_the_fork** is a pure [Erlang application](http://www.erlang.org/)
 which is able to parse [YAML 1.1](http://yaml.org/spec/1.1/) and [YAML
 1.2](http://www.yaml.org/spec/1.2/spec.html) documents, as well as
 JSON documents. It only depends on standard Erlang/OTP applications;
 no external dependency is required. It doesn't use native code either
 (neither port drivers nor NIFs).
 
-yamerl is distributed under the terms of the **2-clause BSD license**;
+yamerl_the_fork is distributed under the terms of the **2-clause BSD license**;
 see `COPYING`.
 
-[![Build Status](https://travis-ci.org/yakaz/yamerl.svg?branch=master)](https://travis-ci.org/yakaz/yamerl)
+[![Build Status](https://travis-ci.org/yakaz/yamerl_the_fork.svg?branch=master)](https://travis-ci.org/yakaz/yamerl_the_fork)
 
 ## Installation
 
@@ -48,25 +48,25 @@ directory (see `code:lib_dir()`).
 
 ## Getting started
 
-Before using yamerl, the application must be started:
+Before using yamerl_the_fork, the application must be started:
 ```erlang
-application:start(yamerl).
+application:start(yamerl_the_fork).
 ```
 
-Now, one can use the `yamerl_constr` module to parse and construct a
+Now, one can use the `yamerl_the_fork_constr` module to parse and construct a
 list of documents from:
 * an in-memory document (string or binary);
 * a file;
 * a stream.
 
 Because a YAML input stream may contain multiple documents,
-`yamerl_constr` always returns a list of documents, even if the input
+`yamerl_the_fork_constr` always returns a list of documents, even if the input
 stream only contains one.
 
 ### Parsing an in-memory document
 
 ```erlang
-yamerl_constr:string("Hello World!").
+yamerl_the_fork_constr:string("Hello World!").
 ```
 ```erlang
 % List of documents; here, only one document.
@@ -96,7 +96,7 @@ Considering the following YAML file:
 ```
 
 ```erlang
-yamerl_constr:file("applications.yaml").
+yamerl_the_fork_constr:file("applications.yaml").
 ```
 ```erlang
 % List of documents; again, only one document here.
@@ -124,25 +124,25 @@ yamerl_constr:file("applications.yaml").
 ### Parsing a stream
 
 The developer is responsible for reading the stream and provide the
-chunks to yamerl.
+chunks to yamerl_the_fork.
 
 ```erlang
 % Initialize a new construction state. It takes a term describing the
 % source; it may be any Erlang term.
-Parser0 = yamerl_constr:new({file, "<stdin>"}),
+Parser0 = yamerl_the_fork_constr:new({file, "<stdin>"}),
 
 % Read chunks and feed the parser. A new parser state is returned.
-{continue, Parser1} = yamerl_constr:next_chunk(Parser0, Chunk1),
+{continue, Parser1} = yamerl_the_fork_constr:next_chunk(Parser0, Chunk1),
 % ...
-{continue, Parser2} = yamerl_constr:next_chunk(Parser1, Chunk2),
+{continue, Parser2} = yamerl_the_fork_constr:next_chunk(Parser1, Chunk2),
 
 % When the stream ends, tell the parser it's the last chunk.
-Documents = yamerl_constr:last_chunk(Parser2, Chunk3).
+Documents = yamerl_the_fork_constr:last_chunk(Parser2, Chunk3).
 ```
 
 ## Simple vs. full document structures
 
-`yamerl_constr` comes with two built-in modes:
+`yamerl_the_fork_constr` comes with two built-in modes:
 * It can output simple documents, eg. documents based on basic Erlang
     structures (strings, numbers, lists, proplists). This is the default
     mode.
@@ -159,7 +159,7 @@ If we use the following YAML document:
 
 Simple documents:
 ```erlang
-yamerl_constr:file("system.yaml").
+yamerl_the_fork_constr:file("system.yaml").
 ```
 ```erlang
 % List of documents.
@@ -177,24 +177,24 @@ yamerl_constr:file("system.yaml").
 
 Full documents:
 ```erlang
-yamerl_constr:file("system.yaml", [{detailed_constr, true}]).
+yamerl_the_fork_constr:file("system.yaml", [{detailed_constr, true}]).
 ```
 ```erlang
 % List of documents.
 [
  % Document with a list as its root node.
- {yamerl_doc,
-  {yamerl_seq, yamerl_node_seq, "tag:yaml.org,2002:seq", [{line, 2}, {column, 1}], [
+ {yamerl_the_fork_doc,
+  {yamerl_the_fork_seq, yamerl_the_fork_node_seq, "tag:yaml.org,2002:seq", [{line, 2}, {column, 1}], [
    % Mapping #1.
-   {yamerl_map, yamerl_node_map, "tag:yaml.org,2002:map", [{line, 2}, {column, 3}], [
+   {yamerl_the_fork_map, yamerl_the_fork_node_map, "tag:yaml.org,2002:map", [{line, 2}, {column, 3}], [
     {
      % Mapping entry #1.
-     {yamerl_str, yamerl_node_str, "tag:yaml.org,2002:str", [{line, 2}, {column, 3}], "os"},
-     {yamerl_str, yamerl_node_str, "tag:yaml.org,2002:str", [{line, 2}, {column, 7}], "FreeBSD"}
+     {yamerl_the_fork_str, yamerl_the_fork_node_str, "tag:yaml.org,2002:str", [{line, 2}, {column, 3}], "os"},
+     {yamerl_the_fork_str, yamerl_the_fork_node_str, "tag:yaml.org,2002:str", [{line, 2}, {column, 7}], "FreeBSD"}
     }, {
      % Mapping entry #2.
-     {yamerl_str, yamerl_node_str, "tag:yaml.org,2002:str", [{line, 3}, {column, 3}], "version"},
-     {yamerl_str, yamerl_node_str, "tag:yaml.org,2002:str", [{line, 3}, {column, 12}], "9.0-RELEASE-p3"}
+     {yamerl_the_fork_str, yamerl_the_fork_node_str, "tag:yaml.org,2002:str", [{line, 3}, {column, 3}], "version"},
+     {yamerl_the_fork_str, yamerl_the_fork_node_str, "tag:yaml.org,2002:str", [{line, 3}, {column, 12}], "9.0-RELEASE-p3"}
     }
    ]}
   ],
